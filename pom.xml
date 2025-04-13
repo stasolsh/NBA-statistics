@@ -4,8 +4,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.home</groupId>
-    <artifactId>NBA-statistics</artifactId>
-    <name>NBA-statistics</name>
+    <artifactId>nba-statistics</artifactId>
+    <name>nba-statistics</name>
     <version>0.0.01</version>
 
     <parent>
@@ -50,7 +50,7 @@
     </dependencies>
 
     <build>
-        <finalName>spring-boot-crud</finalName>
+        <finalName>nba-statistics</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
