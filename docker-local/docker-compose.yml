@@ -1,23 +1,21 @@
 version: '3.7'
 services:
-  #nba-statistics:
-   # build:
-    #  context: ./nba-statistics
-     # dockerfile: Dockerfile
-    #ports:
-     # - "9090:9090"
-      #- "9890:9890"
-    #volumes:
-     # - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    #container_name: nba-statistics
-    #environment:
-     # MYSQL_HOST: mysqldb
-     # MYSQL_USER: root
-     # MYSQL_PASSWORD: 1234
-     # MYSQL_PORT: 3306
-    #depends_on:
-     # mysqldb:
-      #  condition: service_healthy
+  nba-statistics:
+    build:
+      context: ./nba-statistics
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+      - "9890:9890"
+    container_name: nba-statistics
+    environment:
+      MYSQL_HOST: mysqldb
+      MYSQL_USER: mysqldb
+      MYSQL_PASSWORD: 1234
+      MYSQL_PORT: 3306
+    depends_on:
+      mysqldb:
+        condition: service_healthy
   mysqldb:
     container_name: mysqldb
     image: 'mysql:latest'
