@@ -66,3 +66,4 @@ VALUES (1, 'Stephen Curry', 'PG', 34, 1),
     (18, 'Alex Caruso', 'SG', 28, 5),
     (19, 'DeMar DeRozan', 'SF', 28, 5),
     (20, 'Zach LaVine', 'SG', 27, 5);
+
