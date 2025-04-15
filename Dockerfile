@@ -2,7 +2,7 @@ FROM openjdk:21
 
 ENV JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9890"
 
-ARG JAR_FILE=/target/nba-statistics.jar
+ARG JAR_FILE=/build/libs/nba-statistics-0.0.01.jar
 
 ADD ${JAR_FILE} application.jar
 
