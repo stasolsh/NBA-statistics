@@ -9,7 +9,7 @@ ROOT=$(pwd)
 docker-compose -f docker-compose.yml stop
 
 cd "$ROOT"/nba-statistics
-./gradlew clean build -DskipTests=true
+./gradlew clean build -x test
 
 cd "$ROOT"/
 docker-compose -f docker-compose.yml up --build -d --no-deps

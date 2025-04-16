@@ -7,7 +7,7 @@ set ROOT=%cd%
 docker compose -f docker-compose.yml stop
 
 cd %ROOT%/nba-statistics
-call ./gradlew clean build -DskipTests=true
+call ./gradlew clean build -x test
 
 cd %ROOT%/
 docker compose -f docker-compose.yml up --build -d --no-deps
